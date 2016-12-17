@@ -1,5 +1,8 @@
 <?php
 
+Route::auth();
+
+
 // AdminPanel 
 Route::group(['prefix'=>'admin','middleware' => ['auth', 'admin']],  function () {
 
@@ -38,11 +41,8 @@ Route::group(['prefix' => LaravelLocalization::setLocale()], function()
 {
    	Route::get('/', 'HomePageController@index');
    	Route::get('/{category}', 'HomePageController@category');
-   	Route::get('/{category}/{post}', 'HomePageController@post');
+   	Route::get('/{category}/{id}', 'HomePageController@post');
 });
 
 
-Route::auth();
-Route::auth();
 
-Route::get('/home', 'HomeController@index');

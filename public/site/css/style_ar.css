@@ -7,3 +7,40 @@
 }
 
 .navbar {border-radius: 0}
+
+.caption {text-align: right;}
+
+/* Start Show Item Page */
+
+.image {float: right}
+
+.item-info {text-align: right}
+
+.item-info h2 {
+	padding: 10px;
+	margin: 0;
+}
+
+.item-info p {
+	padding: 10px;
+}
+
+.item-info ul li { 
+	padding: 10px;
+}
+
+.item-info ul li:nth-child(odd) {
+	background-color: #e8e8e8;
+}
+
+.item-info ul li span {
+	padding-left: 20px
+}
+
+
+/* End Show Item Page */
+
+
+
+
+

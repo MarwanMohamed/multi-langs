@@ -17,6 +17,7 @@
     <div class="upper-bar">
         <div class="container">
             <div class="lang">
+                <!-- Links For Change Language -->
                 @foreach(LaravelLocalization::getSupportedLocales() as $key => $value)
                     <a href="{{ LaravelLocalization::getLocalizedURL($key)}}"> {{ $value['native'] }}</a>
                 @endforeach

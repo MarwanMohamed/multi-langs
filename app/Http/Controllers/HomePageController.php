@@ -21,4 +21,11 @@ class HomePageController extends Controller
     	$posts = Post::where('cat_id', $category->id)->paginate(10);
     	return view('site.category', compact('category', 'posts'));
     }
+
+    public function post($category, $id)
+    {
+        $category = Category::where('slug', $category)->first();
+        $post = Post::where('cat_id', $category->id)->where('id', $id)->first();
+        return view('site.post', compact('post', 'category'));
+    }
 }
