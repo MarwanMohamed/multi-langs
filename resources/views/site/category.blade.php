@@ -1,6 +1,7 @@
 @extends('site.layout')
 @section('content')
 <h1 class="text-center">{{ucfirst($category->name)}}</h1>
+
 @foreach($posts->chunk(4) as $set)
         <div class="row">
             @foreach($set as $post)
@@ -21,5 +22,6 @@
             @endforeach
         </div>
 @endforeach
+
 {{$posts->links()}}
 @stop

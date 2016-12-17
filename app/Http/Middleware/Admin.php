@@ -16,6 +16,7 @@ class Admin
      */
     public function handle($request, Closure $next)
     {
+        // Check if admin has a permission to login admin panal
          if (Auth::check() && Auth::user()->isAdmin == 1 ) {
             return $next($request);
         }

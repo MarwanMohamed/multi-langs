@@ -1,5 +1,6 @@
 <?php
 
+//  return 10 words from text
 function tenWords($text) 
 {
 	$text = explode(' ', $text, 11 );

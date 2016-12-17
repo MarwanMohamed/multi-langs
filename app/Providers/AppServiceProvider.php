@@ -14,6 +14,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        // Categories list in all pages
         view()->composer('site.layout', function($view)
         {
             $view->with('cats', Category::all());
